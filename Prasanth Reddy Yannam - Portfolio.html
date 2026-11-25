@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Durgaprasanthreddy Yannam, Diploma Mechanical Engineering student and industrial trainee at JOCIL Limited.">
+  <title>Durgaprasanthreddy Yannam | Mechanical Engineering Portfolio</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7fa; --surface: #fff; --text: #172033; --muted: #5b6577;
+      --line: #e1e6ee; --accent: #1769aa; --accent-hover: #0e4f85;
+      --shadow: 0 12px 35px rgba(23, 32, 51, .07);
+    }
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #101722; --surface: #182333; --text: #edf3fb; --muted: #b0bdce;
+      --line: #2b3a4d; --accent: #75baff; --accent-hover: #a1d0ff;
+      --shadow: 0 12px 35px rgba(0, 0, 0, .2);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.7 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    a { color: var(--accent); }
+    .wrap { width: min(1040px, calc(100% - 40px)); margin-inline: auto; }
+    .topbar { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+    .nav { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { color: var(--text); font-weight: 800; text-decoration: none; letter-spacing: -.02em; white-space: nowrap; }
+    .navlinks { display: flex; align-items: center; gap: 18px; list-style: none; margin: 0; padding: 0; }
+    .navlinks a { color: var(--muted); text-decoration: none; font-size: .94rem; }
+    .navlinks a:hover, .navlinks a:focus-visible { color: var(--accent); }
+    .theme-btn { border: 1px solid var(--line); background: var(--surface); color: var(--text); border-radius: 10px; padding: 8px 11px; cursor: pointer; }
+    .hero { padding: 88px 0 76px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--accent); font-weight: 700; font-size: .9rem; letter-spacing: .04em; }
+    .eyebrow::before { content: ""; width: 25px; height: 2px; background: var(--accent); }
+    h1 { font-size: clamp(2.5rem, 7vw, 5rem); line-height: 1.05; letter-spacing: -.055em; max-width: 850px; margin: 20px 0; }
+    .hero p { color: var(--muted); max-width: 700px; font-size: clamp(1.05rem, 2.5vw, 1.25rem); }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; padding: 11px 18px; border: 1px solid var(--line); border-radius: 11px; background: var(--surface); color: var(--text); text-decoration: none; font-weight: 700; }
+    .button.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .button:hover { transform: translateY(-1px); }
+    section { padding: 62px 0; border-top: 1px solid var(--line); }
+    .section-label { color: var(--accent); font-size: .82rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; margin: 0 0 8px; }
+    h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); line-height: 1.2; letter-spacing: -.035em; margin: 0 0 25px; }
+    h3 { margin: 0 0 7px; font-size: 1.2rem; }
+    p { margin-top: 0; }
+    .muted { color: var(--muted); }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 25px; box-shadow: var(--shadow); }
+    .meta { color: var(--muted); font-size: .94rem; margin-bottom: 12px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 18px; }
+    .chip { padding: 6px 11px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+    .list { margin: 0; padding-left: 20px; color: var(--muted); }
+    .list li + li { margin-top: 7px; }
+    .contact-box { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; }
+    .contact-box p { margin-bottom: 0; }
+    footer { padding: 25px 0 35px; color: var(--muted); font-size: .9rem; }
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    @media (max-width: 760px) {
+      .nav { align-items: flex-start; padding: 14px 0; flex-wrap: wrap; }
+      .navlinks { order: 3; width: 100%; gap: 15px; overflow-x: auto; padding-bottom: 3px; }
+      .navlinks a { white-space: nowrap; }
+      .hero { padding: 65px 0 55px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .button:hover { transform: none; } }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <nav class="wrap nav" aria-label="Main navigation">
+      <a class="brand" href="#top">Prasanth Reddy Builds</a>
+      <ul class="navlinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-btn" id="themeToggle" type="button" aria-label="Switch to dark theme">◐ Theme</button>
+    </nav>
+  </div>
+
+  <main id="top">
+    <header class="hero wrap">
+      <span class="eyebrow">Mechanical Engineering · Diploma Student</span>
+      <h1>Durgaprasanthreddy Yannam</h1>
+      <p>Diploma Mechanical Engineering student and industrial trainee at JOCIL Limited, building practical exposure to plant operations, industrial maintenance, and engineering drawings.</p>
+      <div class="actions">
+        <a class="button primary" href="#contact">Get in touch</a>
+        <a class="button" href="https://www.linkedin.com/in/durgaprasanthreddyyannam-3590b9341" target="_blank" rel="noopener noreferrer">View LinkedIn ↗</a>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="wrap">
+        <p class="section-label">About</p>
+        <h2>Motivated to learn, focused on core concepts.</h2>
+        <p class="muted" style="max-width:760px">I am a Diploma Mechanical Engineering student at MBTS Government Polytechnic. I am focused on strengthening my understanding of core concepts and gaining practical learning experience through my education and industrial training. I am motivated to keep learning, develop my technical skills, and grow as an aspiring mechanical engineer.</p>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <p class="section-label">Experience</p>
+        <h2>Industrial training</h2>
+        <article class="card">
+          <h3>Industrial Trainee – Mechanical Engineering</h3>
+          <p class="meta">JOCIL Limited · Dokiparru, Andhra Pradesh · May 2026 – November 2026 · 6 months</p>
+          <p class="muted">Completed industrial training in a plant environment, gaining exposure to industrial maintenance, power plant operations, and engineering drawings.</p>
+          <div class="chips"><span class="chip">Plant exposure</span><span class="chip">Maintenance</span><span class="chip">Power plant</span><span class="chip">Engineering drawings</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="wrap">
+        <p class="section-label">Education</p>
+        <h2>Academic background</h2>
+        <article class="card">
+          <h3>Diploma in Mechanical Engineering</h3>
+          <p class="meta">MBTS Government Polytechnic · June 2024 – April 2027</p>
+          <p class="muted">Currently pursuing diploma studies with a focus on mechanical engineering fundamentals.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <p class="section-label">Skills & credentials</p>
+        <h2>Areas of learning</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Technical exposure</h3>
+            <div class="chips"><span class="chip">Industrial maintenance</span><span class="chip">Power plant operations</span><span class="chip">Engineering drawings</span></div>
+          </article>
+          <article class="card">
+            <h3>Certifications</h3>
+            <ul class="list">
+              <li>UNXT by Unnati – Soft Skill Development Program</li>
+              <li>Introduction to Machining and Machining Fluids</li>
+              <li>Industrial Training Completion Certificate</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Languages</h3>
+            <ul class="list">
+              <li>Telugu – Full Professional</li>
+              <li>English – Professional Working</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Current focus</h3>
+            <p class="muted" style="margin-bottom:0">Strengthening mechanical engineering fundamentals and learning through practical projects and industrial exposure.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <p class="section-label">Projects</p>
+        <h2>Selected work</h2>
+        <article class="card">
+          <h3>Dust Capture X</h3>
+          <p class="meta">Mechanical engineering project concept</p>
+          <p class="muted" style="margin-bottom:0">A project concept focused on capturing dust. Project description, design details, and prototype results can be added here as the work develops.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap contact-box">
+        <div>
+          <p class="section-label">Contact</p>
+          <h2 style="margin-bottom:8px">Let’s connect.</h2>
+          <p class="muted">For professional or project-related communication.</p>
+        </div>
+        <div class="actions" style="margin-top:0">
+          <a class="button primary" href="mailto:durgaprasanthreddyyannam@gmail.com">Email me</a>
+          <a class="button" href="https://www.linkedin.com/in/durgaprasanthreddyyannam-3590b9341" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap">© <span id="year"></span> Durgaprasanthreddy Yannam · Mechanical Engineering Portfolio</div></footer>
+
+  <script>
+    const root = document.documentElement;
+    const toggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('portfolio-theme');
+    if (savedTheme === 'dark' || savedTheme === 'light') root.dataset.theme = savedTheme;
+    toggle.addEventListener('click', () => {
+      root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('portfolio-theme', root.dataset.theme);
+      toggle.setAttribute('aria-label', root.dataset.theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
